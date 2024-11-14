@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Connect - Entrepreneurs Network</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  
+  <header>
+   
+    <div class="header-content">
+      <img src="onnect.png" alt="E-Connect Logo" class="logo">
+      
+    </div>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#videos">Videos</a>
+      <a href="#upload">Upload Video</a>
+      <a href="#networking">Networking</a>
+      <a href="#projects">Projects</a>
+      <a href="#events">Events</a>
+      <a href="#resources">Resources</a>
+      <a href="#messages">Messages</a>
+      <a href="#connections">Connections</a>
+    </nav>
+  </header>
+  <div class="search-container">
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Search for businesses..." required>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+
+  <section id="profile">
+    <h2>Entrepreneur Profile</h2>
+    <div class="profile-container">
+      <img src="rafi.jpg" alt="Profile Picture" class="profile-pic">
+      <div class="profile-info">
+        <h3>MD Rafi</h3>
+        <p>Founder & CEO at Startup X</p>
+        <p>Bio: Entrepreneur passionate about tech innovation and business development.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Video Feed</h2>
+    <div class="video-container">
+      <div class="video-card">
+        <video width="320" height="240" controls>
+          <source src="pitch.mp4" type="video/mp4">
+        </video>
+        <h3>Pitch for Investors</h3>
+        <p>MD Rafi - CEO of Startup X shares his vision.</p>
+      </div>
+      <div class="video-card">
+        <video width="320" height="240" controls>
+          <source src="entreprenuers.mp4" type="video/mp4">
+        </video>
+        <h3>My Startup Journey</h3>
+        <p>Jane Smith - CTO of Startup Y discusses her entrepreneurial path.</p>
+      </div>
+      <div class="video-card">
+        <video width="320" height="240" controls>
+          <source src="marketing.mp4" type="video/mp4">
+        </video>
+        <h3>Marketing Strategies for Startups</h3>
+        <p>Alex Johnson - Marketing Director at Tech Innovators shares valuable insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="upload">
+    <h2>Upload Video</h2>
+    <form id="upload-form">
+      <label for="video-title">Video Title</label>
+      <input type="text" id="video-title" placeholder="Enter title" required>
+      
+      <label for="video-file">Select Video</label>
+      <input type="file" id="video-file" accept="video/*" required>
+
+      <button type="submit">Upload</button>
+    </form>
+  </section>
+
+  <!-- Networking Section -->
+  <section id="networking">
+    <h2>Business Networking</h2>
+    <p>Connect with other entrepreneurs in your industry. Below are recommended connections:</p>
+    <ul>
+      <li>Jane Smith - CTO, Startup Y</li>
+      <li>Alex Johnson - Marketing Director, Tech Innovators</li>
+      <li>Emily Davis - Founder, Social Impact Hub</li>
+    </ul>
+  </section>
+
+  <!-- Projects Collaboration Section -->
+  <section id="projects">
+    <h2>Project Collaboration</h2>
+    <p>Post a project or find team members for your startup. Here are some active projects:</p>
+    <ul>
+      <li><strong>AI Startup Collaboration</strong> - Looking for developers and data scientists.</li>
+      <li><strong>E-commerce Platform Development</strong> - Need a front-end developer and UI/UX designer.</li>
+    </ul>
+  </section>
+
+  <!-- Events and Webinars Section -->
+  <section id="events">
+    <h2>Events & Webinars</h2>
+    <p>Join webinars and live events for entrepreneurs:</p>
+    <ul>
+      <li><strong>How to Pitch to Investors</strong> - Online webinar, Oct 25th, 2024</li>
+      <li><strong>Scaling Your Startup</strong> - Virtual event, Nov 5th, 2024</li>
+    </ul>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources">
+    <h2>Resource Library</h2>
+    <p>Access free tools, articles, and e-books:</p>
+    <ul>
+      <li><a href="#">Startup Funding Guide (PDF)</a></li>
+      <li><a href="#">Top 10 Tools for Entrepreneurs</a></li>
+      <li><a href="#">How to Build a Winning Team</a></li>
+    </ul>
+  </section>
+
+  <!-- Messages Section -->
+  <section id="messages">
+    <h2>Messages</h2>
+    <div id="message-list">
+      <!-- Messages will be dynamically added here -->
+    </div>
+    <form id="message-form">
+      <select id="recipient-select">
+        <option value="">Select recipient</option>
+        <option value="jane-smith">Jane Smith</option>
+        <option value="alex-johnson">Alex Johnson</option>
+        <option value="emily-davis">Emily Davis</option>
+      </select>
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Connections Section -->
+  <section id="connections">
+    <h2>My Connections</h2>
+    <div id="connection-list">
+      <!-- Connections will be dynamically added here -->
+    </div>
+    <form id="connection-form">
+      <input type="text" id="connection-search" placeholder="Search for new connections...">
+      <button type="submit">Find</button>
+    </form>
+  </section>
+
+  <!-- AI Chat Box Section -->
+  <div id="ai-chat-icon">
+    <i class="fas fa-robot"></i>
+  </div>
+  <div id="ai-chat" class="hidden">
+    <div id="chat-header">
+      <h2>AI Assistant</h2>
+      <button id="close-chat"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="chat-container">
+      <div id="chat-messages"></div>
+      <div id="chat-input">
+        <input type="text" id="user-input" placeholder="Ask me anything...">
+        <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
